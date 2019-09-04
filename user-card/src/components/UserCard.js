@@ -1,4 +1,19 @@
 import React from "react";
+import styled from 'styled-components';
+
+const TheH2 = styled.h2`
+    font-size: 3rem;
+`;
+
+const TheH3 = styled.h3`
+    font-size: 1.5rem;
+    color: white;
+`;
+
+const TheP = styled.p`
+    font-size: 1rem;
+    color: white;
+`;
 
 class UserCard extends React.Component {
   constructor() {
@@ -53,28 +68,29 @@ class UserCard extends React.Component {
     return (
       <>
         <div className="user-card">
-          <h2> GitHub User Info</h2>
-          <p> username: {this.state.usercard.login} </p>
-          <h3> {this.state.usercard.name}</h3>
+          <TheH2> GitHub User Info</TheH2>
+          <TheH3> {this.state.usercard.name}</TheH3>
+          <TheP> username: {this.state.usercard.login} </TheP>
           <img
-            width="200px"
+            width="500px"
             alt="user-avatar"
             src={this.state.usercard.avatar_url}
           />
         </div>
 
         <div className="followers">
-          <h2> List of Followers</h2>
+          <TheH2> List of Followers</TheH2>
 
           {this.state.userfollowers.map(follower => {
             return (
-              <div className="follower" key={follower.login}>
+              <div className="follower" key={follower.login.length}>
                 <img
-                  width="25px"
+                  width="30px"
                   alt="user-follower-avatar"
                   src={follower.avatar_url}
                 />{" "}
                 <span>{follower.login}</span>
+                <span>{follower.following}</span>
               </div>
             );
           })}
