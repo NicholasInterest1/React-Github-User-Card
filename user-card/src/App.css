@@ -1,0 +1,42 @@
+ body {
+  background-image: url("https://wallpapercave.com/w/wp3082346.jpg");
+  background-size: 50%;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.App {
+  text-align: center;
+  margin: 4%;
+  width: 100%;
+  display: flex;
+  
+}
+
+.user-search-form{
+  margin-bottom: 5%;
+}
+
+.user-card{
+  width: 45%;
+  background: rgba(25, 25, 25, 0.7);
+  border-style: ridge;
+}
+.followers{
+  margin-left: 1%;
+  width: 45%;
+  height: 100%;
+  padding-bottom: 2%;
+  background: rgba(255, 1255, 255, 0.3);
+  border-style: ridge;
+  display: flex;
+  flex-direction: column;
+}
+
+.follower span{
+  padding-left: 2%;
+}
+
+h2{
+  color: #195D9C;
+}
